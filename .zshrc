@@ -71,7 +71,7 @@ alias downloads="cd ~/Downloads/"
 alias music="cd ~/Music/"
 alias videos="cd ~/Videos/"
 #alias dsa="cd ~/Desktop/kata-machine/src/day1/ && tmux" # ThePrimeagen dsa course exerices
-alias dot-files="cd ~/Desktop/dot-files/"
+alias dot-files="cd ~/Desktop/.dotfiles/"
 alias cplus="cd ~/Desktop/cplus/"
 alias ..="cd .." # go up one direcroty
 alias ...="cd ../.." # go up two directories
@@ -83,6 +83,7 @@ alias gs="git status"
 # script aliases
 alias ide="~/.scripts/setup-tmux-panes.sh" # splits the panes as an ide
 alias setup-repo="~/.scripts/setup-repo.sh" # setups a repo given as an argument usage: setup-repo {repo-name} {repo dir}
+alias gamelauncher="~/.config/hypr/scripts/gamelauncher.sh 4" # Gamelauncher 4 is a variable [1..5] for styles requires steam opened
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
