@@ -60,7 +60,7 @@ alias vc='code' # gui code editor
 alias c="clear"
 alias x="exit"
 alias myip="curl http://ipecho.net/plain; echo" # get IP address
-alias zshconf="nvim ~/.zshrc"
+alias zshconf="nvim ~/.zshrc" # to open and edit the config
 alias zshsrc="source ~/.zshrc" # to source the config
 
 # ease acces to directories
