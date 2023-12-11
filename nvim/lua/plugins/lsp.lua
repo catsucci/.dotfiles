@@ -31,7 +31,7 @@ return {
         "marksman",
         "quick_lint_js",
         "tsserver",
-        "yamlls",
+        -- "yamlls",
       }
     })
 

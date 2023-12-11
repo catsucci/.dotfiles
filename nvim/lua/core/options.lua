@@ -52,3 +52,6 @@ opt.foldexpr = "nvim_treesitter#foldexpr()" -- Utilize Treesitter folds
 
 -- Always 8 lines on top or on bottom
 vim.opt.scrolloff = 8
+
+-- Set color Column
+vim.opt.colorcolumn = "80"
