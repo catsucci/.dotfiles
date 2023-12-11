@@ -115,3 +115,14 @@ keymap.set("n", '<leader>de', function() require('telescope.builtin').diagnostic
 -- Increment/decrement
 keymap.set("n", "+", "<C-a>")
 keymap.set("n", "-", "<C-x>")
+
+-- Better jumping
+keymap.set("n", "<C-u>", "<C-u>zz")
+keymap.set("n", "<C-d>", "<C-d>zz")
+
+-- Delete a word backwards
+keymap.set("n", "dw", 'vb"_d')
+
+-- Select all
+keymap.set("n", "<C-a>", "gg<S-v>G")
+
