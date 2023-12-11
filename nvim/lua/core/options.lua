@@ -50,3 +50,5 @@ opt.foldlevel = 20
 opt.foldmethod = "expr"
 opt.foldexpr = "nvim_treesitter#foldexpr()" -- Utilize Treesitter folds
 
+-- Always 8 lines on top or on bottom
+vim.opt.scrolloff = 8
