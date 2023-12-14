@@ -20,13 +20,15 @@ opt.wrap = false
 -- Search Settings
 opt.ignorecase = true
 opt.smartcase = true
+opt.hlsearch = false
+opt.incsearch = true
 
 -- Cursor Line
 opt.cursorline = true
 
 -- Appearance
 opt.termguicolors = true
-opt.background = "dark"
+-- opt.background = "dark"
 opt.signcolumn = "yes"
 
 -- Backspace
@@ -51,7 +53,15 @@ opt.foldmethod = "expr"
 opt.foldexpr = "nvim_treesitter#foldexpr()" -- Utilize Treesitter folds
 
 -- Always 8 lines on top or on bottom
-vim.opt.scrolloff = 8
+opt.scrolloff = 8
 
 -- Set color Column
-vim.opt.colorcolumn = "80"
+opt.colorcolumn = "80"
+opt.signcolumn = "yes"
+opt.isfname:append("@-@")
+
+-- swap file options
+opt.swapfile = false
+opt.backup = false
+opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
+opt.undofile = true

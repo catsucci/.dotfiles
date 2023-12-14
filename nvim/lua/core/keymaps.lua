@@ -112,6 +112,9 @@ keymap.set("n", '<leader>df', '<cmd>Telescope dap frames<cr>')
 keymap.set("n", '<leader>dh', '<cmd>Telescope dap commands<cr>')
 keymap.set("n", '<leader>de', function() require('telescope.builtin').diagnostics({default_text=":E:"}) end)
 
+-- undo tree plugin
+keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle)
+
 -- Increment/decrement
 keymap.set("n", "+", "<C-a>")
 keymap.set("n", "-", "<C-x>")
@@ -123,12 +126,29 @@ keymap.set("n", "dw", 'vb"_d')
 keymap.set("n", "<C-a>", "gg<S-v>G")
 
 -- Moving elements around
-vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
-vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
 -- Better jumping
-vim.keymap.set("n", "J", "mzJ`z")
-vim.keymap.set("n", "<C-d>", "<C-d>zz")
-vim.keymap.set("n", "<C-u>", "<C-u>zz")
-vim.keymap.set("n", "n", "nzzzv")
-vim.keymap.set("n", "N", "Nzzzv")
+keymap.set("n", "J", "mzJ`z")
+keymap.set("n", "<C-d>", "<C-d>zz")
+keymap.set("n", "<C-u>", "<C-u>zz")
+keymap.set("n", "n", "nzzzv")
+keymap.set("n", "N", "Nzzzv")
+
+-- greatest remap ever
+keymap.set("x", "<leader>p", [["_dP]])
+
+-- next greatest remap ever : asbjornHaland
+keymap.set({"n", "v"}, "<leader>y", [["+y]])
+keymap.set("n", "<leader>Y", [["+Y]])
+
+keymap.set({"n", "v"}, "<leader>d", [["_d]])
+
+-- This is going to get me cancelled
+keymap.set("i", "<C-c>", "<Esc>")
+
+-- ThePrimeagen replace
+keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+
+keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
