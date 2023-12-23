@@ -44,6 +44,9 @@ function in {
     fi
 }
 
+# set vi motions
+set -o vi
+
 # Helpful aliases
 alias vim=nvim
 alias  l='eza -lh  --icons=auto' # long list
@@ -70,7 +73,8 @@ alias pictures="cd ~/Pictures/"
 alias downloads="cd ~/Downloads/"
 alias music="cd ~/Music/"
 alias videos="cd ~/Videos/"
-#alias dsa="cd ~/Desktop/kata-machine/src/day1/ && tmux" # ThePrimeagen dsa course exerices
+alias dsa="cd ~/Desktop/kata-machine/src/day1/ && tmux" # ThePrimeagen dsa course exerices
+alias odin="cd ~/Desktop/top/" # My progress in The Odin Project directory
 alias dot-files="cd ~/Desktop/.dotfiles/"
 alias cplus="cd ~/Desktop/cplus/"
 alias ..="cd .." # go up one direcroty
