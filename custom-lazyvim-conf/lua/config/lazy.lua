@@ -18,7 +18,8 @@ require("lazy").setup({
 			"LazyVim/LazyVim",
 			import = "lazyvim.plugins",
 			opts = {
-				colorscheme = "solarized-osaka",
+				colorscheme = "catppuccin",
+				-- colorscheme = "solarized-osaka", -- Default that came with custom conf
 				news = {
 					lazyvim = true,
 					neovim = true,
@@ -73,6 +74,7 @@ require("lazy").setup({
 				"tohtml",
 				"tutor",
 				"zipPlugin",
+				-- "mini.surround"
 			},
 		},
 	},
