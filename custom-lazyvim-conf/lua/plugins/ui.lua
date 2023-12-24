@@ -96,7 +96,8 @@ return {
 		opts = {
 			options = {
 				-- globalstatus = false,
-				theme = "solarized_dark",
+				theme = "catppuccin",
+				-- theme = "solarized_dark", -- Default custom conf
 			},
 		},
 	},
@@ -112,7 +113,7 @@ return {
 			require("incline").setup({
 				highlight = {
 					groups = {
-						InclineNormal = { guibg = colors.magenta500, guifg = colors.base04 },
+						InclineNormal = { guibg = "#89b4fa", guifg = colors.base04 },
 						InclineNormalNC = { guifg = colors.violet500, guibg = colors.base03 },
 					},
 				},
