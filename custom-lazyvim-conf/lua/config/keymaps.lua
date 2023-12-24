@@ -90,7 +90,7 @@ end)
 keymap.set("i", "jk", "<ESC>")
 
 -- undo tree plugin
-keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle)
+-- keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle)
 
 -- Increment/decrement
 keymap.set("n", "+", "<C-a>")
