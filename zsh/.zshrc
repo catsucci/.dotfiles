@@ -85,6 +85,7 @@ alias g="git"
 alias gs="git status"
 
 # script aliases
+alias tmux-sessionizer="~/.scripts/tmux.sessionizer.sh" # A tmux sessionizer script by ThePrimeagen
 alias ide="~/.scripts/setup-tmux-panes.sh" # splits the panes as an ide
 alias setup-repo="~/.scripts/setup-repo.sh" # setups a repo given as an argument usage: setup-repo {repo-name} {repo dir}
 alias gamelauncher="~/.config/hypr/scripts/gamelauncher.sh 4" # Gamelauncher 4 is a variable [1..5] for styles requires steam opened
