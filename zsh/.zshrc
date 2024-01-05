@@ -69,13 +69,15 @@ alias zshsrc="source ~/.zshrc" # to source the config
 # ease acces to directories
 alias desktop="cd ~/Desktop/"
 alias documents="cd ~/Documents/"
+alias vault="cd ~/Documents/Vault"
 alias pictures="cd ~/Pictures/"
 alias downloads="cd ~/Downloads/"
-alias music="cd ~/Music/"
 alias videos="cd ~/Videos/"
+alias music="cd ~/Music/"
 alias dsa="cd ~/Desktop/kata-machine/src/" # ThePrimeagen dsa course exerices
-alias odin="cd ~/Desktop/top/" # My progress in The Odin Project directory
+alias odin="cd ~/Desktop/odin/" # My progress in The Odin Project directory
 alias dot-files="cd ~/Desktop/.dotfiles/"
+alias repos="cd ~/Repos/" # The Repos I clone for configuration or theming
 alias cplus="cd ~/Desktop/cplus/"
 alias ..="cd .." # go up one direcroty
 alias ...="cd ../.." # go up two directories
