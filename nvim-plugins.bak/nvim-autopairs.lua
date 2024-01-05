@@ -1,3 +1,4 @@
+-- "If you know how to code you don't use autopairs" ThePrimeagen
 -- Auto-completion of bracket/paren/quote pairs
 return {
     -- https://github.com/windwp/nvim-autopairs
