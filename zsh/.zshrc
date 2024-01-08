@@ -70,20 +70,20 @@ alias zshconf="nvim ~/.zshrc" # to open and edit the config
 alias zshsrc="source ~/.zshrc" # to source the config
 
 # ease acces to directories
-alias desktop="cd ~/Desktop/"
-alias documents="cd ~/Documents/"
-alias vault="cd ~/Documents/Vault"
-alias pictures="cd ~/Pictures/"
-alias downloads="cd ~/Downloads/"
-alias videos="cd ~/Videos/"
-alias music="cd ~/Music/"
-alias dsa="cd ~/Desktop/kata-machine/src/" # ThePrimeagen dsa course exerices
-alias odin="cd ~/Desktop/odin/" # My progress in The Odin Project directory
-alias dot-files="cd ~/Desktop/.dotfiles/"
-alias repos="cd ~/Repos/" # The Repos I clone for configuration or theming
-alias cplus="cd ~/Desktop/cplus/"
 alias ..="cd .." # go up one direcroty
 alias ...="cd ../.." # go up two directories
+# alias desktop="cd ~/Desktop/"
+# alias documents="cd ~/Documents/"
+# alias vault="cd ~/Documents/Vault"
+# alias pictures="cd ~/Pictures/"
+# alias downloads="cd ~/Downloads/"
+# alias videos="cd ~/Videos/"
+# alias music="cd ~/Music/"
+# alias dsa="cd ~/Desktop/kata-machine/src/" # ThePrimeagen dsa course exerices
+# alias odin="cd ~/Desktop/odin/" # My progress in The Odin Project directory
+# alias dot-files="cd ~/Desktop/.dotfiles/"
+# alias repos="cd ~/Repos/" # The Repos I clone for configuration or theming
+# alias cplus="cd ~/Desktop/cplus/"
 
 # git aliases
 alias g="git"
@@ -93,7 +93,10 @@ alias gs="git status"
 # alias tmux-sessionizer="~/.scripts/tmux.sessionizer.sh" # A tmux sessionizer script by ThePrimeagen
 alias ide="~/.scripts/setup-tmux-panes.sh" # splits the panes as an ide
 alias setup-repo="~/.scripts/setup-repo.sh" # setups a repo given as an argument usage: setup-repo {repo-name} {repo dir}
-alias gamelauncher="~/.config/hypr/scripts/gamelauncher.sh 4" # Gamelauncher 4 is a variable [1..5] for styles requires steam opened
+
+# fzf stuff
+source /usr/share/fzf/completion.zsh
+source /usr/share/fzf/key-bindings.zsh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
