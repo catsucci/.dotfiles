@@ -113,7 +113,7 @@ keymap.set("n", '<leader>de', function() require('telescope.builtin').diagnostic
 -- undo tree plugin
 keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle)
 
-keymap.set("n", "x", '"_x') -- to make x delete and not cut
+keymap.set("n", "x", '"_x') -- to send them to the black hole register
 
 -- Increment/decrement
 keymap.set("n", "+", "<C-a>")
