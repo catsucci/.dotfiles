@@ -31,7 +31,7 @@ Obsidian vlc
 flatpak install flathub md.obsidian.Obsidian
 
 ```bash
-sudo pacman -S p7zip unzip unrar htop wget locate fzf
+sudo pacman -S p7zip zip unzip unrar htop wget locate fzf man-db
 yay -S timeshift gnome-shell-pomodoro speedtest-cli
 ```
 
@@ -50,7 +50,7 @@ sudo pacman -S libreoffice-fresh vlc gimp krita inkscape obs-studio
 ## Discord & webcord (for streaming)
 
 ```bash
-yay -S discord_arch_electron Webcord discord-screenaudio
+yay -S discord_arch_electron Webcord 
 ```
 
 ## Install games
@@ -80,3 +80,19 @@ wget https://raw.githubusercontent.com/dreamsofcode-io/tmux/main/tmux.conf
 ## Zathura
 
 A light wieght pdf reader
+
+Will not work with pdf by default, you ,might need to install this:
+
+```bash
+sudo pacman -S zathura zathura-pdf-mupdf
+```
+
+Read more on <https://wiki.archlinux.org/title/Zathura>
+
+Or install alternative:
+
+## llpp
+
+```bash
+yay -S llpp
+```

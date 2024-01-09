@@ -2,6 +2,19 @@
 
 <https://github.com/andreasgrafen/cascade>
 
-cp my/dots/firefox/chrome folder into the firefox folderjk
+How to install Cascade
 
-To costumize the side bar, use my costume css file in the firefox folder as a base
+* Type `about:config` into your URL bar. Click on the I accept the risk button if you're shown a warning.
+* Search for `toolkit.legacyUserProfileCustomizations.stylesheets` and set it to true.
+* Go to your profile folder:
+
+ Linux: `$HOME/.mozilla/firefox/######.default-release/`
+ MacOS: `Users/[USERNAME]/Library/Application Support/Firefox/Profiles/######.default-release`
+ Windows: `C:\Users\[USERNAME]\AppData\Roaming\Mozilla\Firefox\Profiles\######.default-release`
+
+* Copy the chrome folder into your profile and restart Firefox.
+* Customize everything to your liking. (optional)
+
+## Tab Center Reborn
+
+To customize the side bar, use my costume css file in the firefox folder as a base

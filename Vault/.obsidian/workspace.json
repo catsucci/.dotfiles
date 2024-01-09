@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ArchConfiguration/spotify.md",
+                "file": "ArchConfiguration/firefox.md",
                 "mode": "source",
                 "source": false
               }
@@ -48,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "file:spot",
+                "query": "firef",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ArchConfiguration/spotify.md",
+                "file": "ArchConfiguration/firefox.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "ArchConfiguration/spotify.md",
+                "file": "ArchConfiguration/firefox.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ArchConfiguration/spotify.md"
+                "file": "ArchConfiguration/firefox.md"
               }
             }
           }
@@ -149,6 +149,7 @@
   },
   "active": "9aa3297a34c7122c",
   "lastOpenFiles": [
+    "ArchConfiguration/spotify.md",
     "ArchConfiguration/Flatpak.md",
     "ArchConfiguration/AppsAndTools.md",
     "Gaming.md",
