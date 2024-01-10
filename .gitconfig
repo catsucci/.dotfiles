@@ -1,0 +1,11 @@
+[user]
+	name = catsucci
+	email = 150689455+catsucci@users.noreply.github.com
+[init]
+	defaultBranch = main
+[color]
+	ui = auto
+[pull]
+	rebase = false
+[core]
+	editor = nvim
