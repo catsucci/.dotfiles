@@ -51,7 +51,8 @@ set -o vi
 bindkey -s '^f' '~/.scripts/tmux.sessionizer.sh\n'
 
 # Helpful aliases
-alias vim=nvim
+alias vim=nvim # I like to do it like ThePrimeagen
+alias fvim='nvim $(fzf)' # To vim into the fuzzy finded file
 alias  l='eza -lh  --icons=auto' # long list
 alias ls='eza -1   --icons=auto' # short list
 alias ll='eza -lha --icons=auto --sort=name --group-directories-first' # long list all
@@ -72,18 +73,6 @@ alias zshsrc="source ~/.zshrc" # to source the config
 # ease acces to directories
 alias ..="cd .." # go up one direcroty
 alias ...="cd ../.." # go up two directories
-# alias desktop="cd ~/Desktop/"
-# alias documents="cd ~/Documents/"
-# alias vault="cd ~/Documents/Vault"
-# alias pictures="cd ~/Pictures/"
-# alias downloads="cd ~/Downloads/"
-# alias videos="cd ~/Videos/"
-# alias music="cd ~/Music/"
-# alias dsa="cd ~/Desktop/kata-machine/src/" # ThePrimeagen dsa course exerices
-# alias odin="cd ~/Desktop/odin/" # My progress in The Odin Project directory
-# alias dot-files="cd ~/Desktop/.dotfiles/"
-# alias repos="cd ~/Repos/" # The Repos I clone for configuration or theming
-# alias cplus="cd ~/Desktop/cplus/"
 
 # git aliases
 alias g="git"
@@ -103,6 +92,12 @@ source /usr/share/fzf/key-bindings.zsh
 
 #Display Pokemon
 #pokemon-colorscripts --no-title -r 1,3,6
+
+# fzf catppuccin theme
+export FZF_DEFAULT_OPTS=" \
+--color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 \
+--color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
+--color=marker:#f5e0dc,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
