@@ -99,6 +99,12 @@ export FZF_DEFAULT_OPTS=" \
 --color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
 --color=marker:#f5e0dc,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8"
 
+# Setting up lazygit theme
+# This will instruct lazygit to open both config files, merge them, and then boot.
+# You can add more config files, delimited by a comma, to this list
+# uncomment if lazygit doesn't follow your terminal theme (mine is catppucin)
+# alias lazygit='lazygit --use-config-file="/home/catsucci/.config/lazygit/config.yml,/home/catsucci/.config/lazygit/mauve.yml"'
+
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
