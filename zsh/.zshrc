@@ -8,6 +8,9 @@ source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 plugins=(git sudo zsh-256color zsh-autosuggestions zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
 
+# Zsh syntax highlighting theme
+source ~/.zsh/catppuccin_mocha-zsh-syntax-highlighting.zsh
+
 # In case a command is not found, try to find the package that has it
 function command_not_found_handler {
     local purple='\e[1;35m' bright='\e[0;1m' green='\e[1;32m' reset='\e[0m'
