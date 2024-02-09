@@ -51,7 +51,7 @@ function in {
 set -o vi
 
 # Keybindings
-bindkey -s '^f' '~/.scripts/tmux.sessionizer.sh\n'
+bindkey -s '^f' '~/.scripts/tmux.sessionizer.sh\n' # A tmux sessionizer script by ThePrimeagen
 
 # Helpful aliases
 alias vim=nvim # I like to do it like ThePrimeagen
@@ -82,7 +82,6 @@ alias g="git"
 alias gs="git status"
 
 # script aliases
-# alias tmux-sessionizer="~/.scripts/tmux.sessionizer.sh" # A tmux sessionizer script by ThePrimeagen
 alias ide="~/.scripts/setup-tmux-panes.sh" # splits the panes as an ide
 alias setup-repo="~/.scripts/setup-repo.sh" # setups a repo given as an argument usage: setup-repo {repo-name} {repo dir}
 
