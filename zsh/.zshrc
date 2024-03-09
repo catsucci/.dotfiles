@@ -72,6 +72,8 @@ alias x="exit"
 alias myip="curl http://ipecho.net/plain; echo" # get IP address
 alias zshconf="nvim ~/.zshrc" # to open and edit the config
 alias zshsrc="source ~/.zshrc" # to source the config
+alias pdf="find . -type f -name '*.pdf' | ~/.scripts/engulf.sh zathura fzf" # to open a pdf with zathura
+alias zath='~/.scripts/engulf.sh zathura'
 
 # ease acces to directories
 alias ..="cd .." # go up one direcroty
@@ -123,3 +125,7 @@ eval "$(zoxide init --cmd cd zsh)"
 # required to initialize starship
 eval "$(starship init zsh)"
 
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
