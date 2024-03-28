@@ -84,7 +84,7 @@ alias g="git"
 alias gs="git status"
 
 # script aliases
-alias ide="~/.scripts/setup-tmux-panes.sh" # splits the panes as an ide
+alias tsp="~/.scripts/setup-tmux-panes.sh" # splits the panes in tmux
 alias setup-repo="~/.scripts/setup-repo.sh" # setups a repo given as an argument usage: setup-repo {repo-name} {repo dir}
 
 # Logging helpers
