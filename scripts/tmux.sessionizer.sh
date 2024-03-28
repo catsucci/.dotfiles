@@ -3,7 +3,7 @@
 if [[ $# -eq 1 ]]; then
 	selected=$1
 else
-	selected=$(find ~/ ~/Desktop ~/Desktop/odin/ ~/Desktop/kata-machine/src/ ~/Desktop/cplus ~/Repos/ ~/Documents/ ~/Documents/Vault ~/.config/ -mindepth 1 -maxdepth 1 -type d | fzf)
+	selected=$(find ~/Desktop/ ~/Repos/Odin/ ~/Documents/ESTO/cplus ~/Repos/ ~/Documents/ ~/Documents/Vault ~/.config/ -mindepth 1 -maxdepth 1 -type d | fzf)
 fi
 
 if [[ -z $selected ]]; then
