@@ -29,8 +29,14 @@ alias x="exit"
 alias myip="curl http://ipecho.net/plain; echo" # get IP address
 alias zshconf="nvim ~/.zshrc" # to open and edit the config
 alias zshsrc="source ~/.zshrc" # to source the config
+# Viewing man pages with bat using the `help` command
+alias bathelp='bat --plain --language=help'
+help() {
+    "$@" --help 2>&1 | bathelp
+}
+alias -g -- --help='--help 2>&1 | bat --language=help --style=plain'
 
-# ease acces to directories
+# easy acces to directories
 alias ..="cd .." # go up one direcroty
 alias ...="cd ../.." # go up two directories
 
