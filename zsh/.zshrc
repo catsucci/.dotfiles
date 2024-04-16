@@ -22,7 +22,8 @@ alias ls='eza -1   --icons=auto' # short list
 alias ll='eza -lha --icons=auto --sort=name --group-directories-first' # long list all
 alias ld='eza -lhD --icons=auto' # long list dirs
 alias lt='eza --tree --icons=auto' # list as tree
-alias llt='eza --long --tree --icons=auto' # long list as tree
+alias lta='eza -a --tree --icons=auto' # list as tree
+alias llt='eza -lha --long --tree --icons=auto' # long list as tree
 alias vc='code' # gui code editor
 alias c="clear"
 alias x="exit"
