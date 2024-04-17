@@ -36,7 +36,9 @@ help() {
     "$@" --help 2>&1 | bathelp
 }
 alias -g -- --help='--help 2>&1 | bat --language=help --style=plain'
-
+#Toggle starship customization for compact panes in tmux
+alias stroff='mv ~/.config/starship.toml ~/.config/starship.toml.bak'
+alias stron='mv ~/.config/starship.toml.bak ~/.config/starship.toml'
 # easy acces to directories
 alias ..="cd .." # go up one direcroty
 alias ...="cd ../.." # go up two directories
