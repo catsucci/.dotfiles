@@ -2,7 +2,15 @@
 export ZSH=$HOME/.oh-my-zsh
 
 # List of plugins used
-plugins=(git sudo zsh-256color zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(
+	git
+	sudo
+	copyfile
+	web-search
+	zsh-256color
+	zsh-autosuggestions
+	zsh-syntax-highlighting
+)
 source $ZSH/oh-my-zsh.sh
 
 # Zsh syntax highlighting theme
