@@ -69,6 +69,16 @@ same time and some other cool stuff, just edit the following file to your liking
 sudo vi /etc/pacman.conf # If it seems confusing, read the docs
 ```
 
+### Installing yay
+
+To install yay:
+```bash
+# in you're home dir
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si
+```
+
 ### My stuff
 
 So, now we have a running Arch linux, with either Gnome, or your 
@@ -96,7 +106,7 @@ cp .gitconfig ~/
 ### Some useful apps & tools
 
 ```bash
-sudo pacman -S zsh firefox p7zip zip unzip unrar htop wget locate fzf man-db ripgrep tmux neovim zoxide ttf-jetbrains-mono-nerd jdk-openjdk libreoffice-fresh vlc gimp inkscape obs-studio zathura zathura-pdf-mupdf flatpak github-cli lazygit python-pip spotify-launcher sqlite-doc sqlitebrowser adobe-source-code-pro-fonts adobe-source-han-sans-jp-fonts adobe-source-han-serif-jp-fonts alacritty bat bluez-utils cloc curl eza fd htop kdenlive noto-fonts-cjk noto-fonts-emoji steam texlive thefuck tldr wine
+sudo pacman -S blueman zsh tree-sitter-cli firefox p7zip zip unzip unrar htop wget locate fzf man-db ripgrep tmux neovim zoxide ttf-jetbrains-mono-nerd jdk-openjdk libreoffice-fresh vlc gimp inkscape obs-studio zathura zathura-pdf-mupdf flatpak github-cli lazygit python-pip spotify-launcher sqlite-doc sqlitebrowser adobe-source-code-pro-fonts adobe-source-han-sans-jp-fonts adobe-source-han-serif-jp-fonts alacritty bat bluez-utils cloc curl eza fd htop kdenlive noto-fonts-cjk noto-fonts-emoji steam texlive thefuck tldr wine
 yay -S litecli vesktop-bin visual-studio-code-bin
 ```
 Some other apps:
@@ -106,7 +116,7 @@ postman, sublime merge, audacity, ...
 
 #### GIT & Github
 
-Configure git using [this course](https://www.theodinproject.com/lessons/foundations-setting-up-git), GitHub cli using `gh auth`, 
+Configure git using [this course](https://www.theodinproject.com/lessons/foundations-setting-up-git), GitHub cli using `gh auth login`, 
 
 #### Node.js
 
@@ -154,7 +164,7 @@ Set zsh to be your default shell:
 ```bash
 chsh $USERNAME
 # make you sure you know where is your zsh path is
-/bin/zsh
+/usr/bin/zsh
 ```
 Copy my .zshrc into your home dir:
 
