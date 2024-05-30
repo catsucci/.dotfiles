@@ -106,7 +106,7 @@ cp .gitconfig ~/
 ### Some useful apps & tools
 
 ```bash
-sudo pacman -S blueman zsh tree-sitter-cli firefox p7zip zip unzip unrar htop wget locate fzf man-db ripgrep tmux neovim zoxide ttf-jetbrains-mono-nerd jdk-openjdk libreoffice-fresh vlc gimp inkscape obs-studio zathura zathura-pdf-mupdf flatpak github-cli lazygit python-pip spotify-launcher sqlite-doc sqlitebrowser alacritty bat bluez-utils cloc curl eza fd htop kdenlive noto-fonts-cjk noto-fonts-emoji steam texlive thefuck tldr wine
+sudo pacman -S blueman zsh tree-sitter-cli xclip firefox p7zip zip unzip unrar htop wget locate fzf man-db ripgrep tmux neovim zoxide ttf-jetbrains-mono-nerd jdk-openjdk libreoffice-fresh vlc gimp inkscape obs-studio zathura zathura-pdf-mupdf flatpak github-cli lazygit python-pip spotify-launcher sqlite-doc sqlitebrowser alacritty bat bluez-utils cloc curl eza fd htop kdenlive noto-fonts-cjk noto-fonts-emoji steam texlive thefuck tldr wine
 yay -S litecli vesktop-bin visual-studio-code-bin
 ```
 Some other apps:
