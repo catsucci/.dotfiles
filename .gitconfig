@@ -2,11 +2,11 @@
     name = catsucci
     email = 150689455+catsucci@users.noreply.github.com
 [init]
-    defaultBranch = main
+	defaultBranch = main
 [color]
-    ui = auto
+	ui = auto
 [pull]
-    rebase = false
+	rebase = false
 [core]
     editor = nvim
     pager = delta

@@ -16,6 +16,7 @@ order += "wireless wlan0"
 order += "ethernet eth0"
 order += "disk /"
 order += "battery all"
+order += "memory"
 order += "load"
 order += "tztime local"
 
@@ -34,6 +35,13 @@ battery all {
         threshold_type = "time"
         last_full_capacity = true
         integer_battery_capacity = true
+        low_threshold = 10
+}
+
+memory {
+        format = "%free %available (%used) / %total"
+        threshold_degraded = "10%"
+        format_degraded = "MEMORY: %free"
 }
 
 tztime local {
