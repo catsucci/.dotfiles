@@ -44,10 +44,11 @@ zinit cdreplay -q
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # Keybindings
-bindkey -e
+
+# bindkey -e
 bindkey '^p' history-search-backward
 bindkey '^n' history-search-forward
-bindkey -s '^f' '~/.scripts/tmux.sessionizer.sh\n' # A tmux sessionizer script by ThePrimeagen
+bindkey -s '^f' '~/bin/.local/scripts/tmux-sessionizer.sh\n' # A tmux sessionizer script by ThePrimeagen
 
 # History
 HISTSIZE=5000
@@ -61,6 +62,7 @@ setopt hist_ignore_all_dups
 setopt hist_save_no_dups
 setopt hist_ignore_dups
 setopt hist_find_no_dups
+# set -o vi
 
 # Completion styling
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
@@ -80,6 +82,7 @@ alias lta='eza -a --tree --icons=auto' # list as tree
 alias llt='eza -lha --long --tree --icons=auto' # long list as tree
 alias ..="cd .." # go up one direcroty
 alias ...="cd ../.." # go up two directories
+alias mkdir='mkdir -p'
 alias c="clear"
 alias x="exit"
 alias vc='code' # gui code editor
@@ -92,7 +95,9 @@ help() {
 alias -g -- --help='--help 2>&1 | bat --language=help --style=plain'
 
 # script aliases
-alias tsp="~/.scripts/setup-tmux-panes.sh" # splits the panes in tmux
+alias tsp="~/bin/.local/scripts/setup-tmux-panes.sh" # splits the panes in tmux
+alias tmux-sessionizer='~/bin/scripts/tmux-sessionizer.sh'
+alias cht="~/bin/.local/scripts/cht.sh --shell" # runs the cheat sheet in shell mode
 
 # git aliases
 alias g="git"
@@ -103,6 +108,8 @@ alias gll='git log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn
 alias glog="git log --graph --topo-order --pretty='%w(100,0,6)%C(yellow)%h%C(bold)%C(black)%d %C(cyan)%ar %C(green)%an%n%C(bold)%C(white)%s %N' --abbrev-commit"
 alias gdate='git log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=relative'
 alias gdatelong='git log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short'
+
+alias css-reset="cp -r ~/Documents/css-reset/ ."
 
 # fzf stuff
 source /usr/share/fzf/completion.zsh
@@ -128,7 +135,7 @@ _fzf_compgen_dir() {
 
 source ~/fzf-git.sh/fzf-git.sh
 
-export BAT_THEME=tokyonight_night
+export BAT_THEME="Catppuccin Mocha"
 
 export FZF_CTRL_T_OPTS="--preview 'bat -n --color=always --line-range :500 {}'"
 export FZF_ALT_C_OPTS="--preview 'eza --tree --color=always {} | head -200'"
@@ -148,6 +155,10 @@ _fzf_comprun() {
   esac
 }
 
+# exports
+export EDITOR='nvim'
+export PATH="$HOME/.cargo/bin:$PATH"
+
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
@@ -156,6 +167,7 @@ export NVM_DIR="$HOME/.nvm"
 eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)" # change the default cd to an alias for zoxide
 eval $(thefuck --alias)
+fpath=(~/.zsh.d/ $fpath)
 
 # export PATH="$HOME/.symfony5/bin:$PATH"
 
