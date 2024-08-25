@@ -25,8 +25,11 @@ zinit snippet OMZP::command-not-found
 # Load completions
 autoload -Uz compinit && compinit
 
-# Initialize Oh My Posh
-eval "$(oh-my-posh init zsh)"
+# Initialize Oh My Posh aka the prompt
+eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/zen.toml)"
+# eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/catppuccin_mocha.omp.json)"
+# eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/1_shell.omp.json)"
+# eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/neko.omp.json)"
 
 # Keybindings
 bindkey '^p' history-search-backward
