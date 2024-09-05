@@ -1,11 +1,27 @@
 [user]
-    name = catsucci
-    email = 150689455+catsucci@users.noreply.github.com
+  name = catsucci
+  email = 150689455+catsucci@users.noreply.github.com
 [init]
-	defaultBranch = main
+  defaultBranch = main
 [color]
-	ui = auto
+  ui = auto
 [pull]
-	rebase = false
+  rebase = false
 [core]
-    editor = nvim
+  editor = nvim
+  pager = delta
+[interactive]
+  diffFilter = delta --color-only
+
+[delta]
+  navigate = true    # use n and N to move between diff sections
+
+    # delta detects terminal colors automatically; set one of these to disable auto-detection
+    # dark = true
+    # light = true
+
+[merge]
+  conflictstyle = diff3
+
+[diff]
+  colorMoved = default
