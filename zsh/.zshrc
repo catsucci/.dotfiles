@@ -93,6 +93,7 @@ alias setup-web="cp -r ~/Documents/basic-web-boilerplate/* ."
 # fzf settings
 source /usr/share/fzf/completion.zsh
 source /usr/share/fzf/key-bindings.zsh
+source ~/fzf-git.sh/fzf-git.sh
 
 export FZF_DEFAULT_COMMAND="fd --hidden --strip-cwd-prefix --exclude .git"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
