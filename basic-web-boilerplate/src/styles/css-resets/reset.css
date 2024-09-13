@@ -4,16 +4,29 @@
   line-height: 1.5;
 }
 
-h1, h2, h3, h4, h5, figure, p, ol, ul {
+h1,
+h2,
+h3,
+h4,
+h5,
+figure,
+p,
+ol,
+ul {
   margin: 0;
 }
 
-ol[role="list"], ul[role="list"] {
+ol[role="list"],
+ul[role="list"] {
   list-style: none;
   padding-inline: 0;
 }
 
-h1, h2, h3, h4, h5 {
+h1,
+h2,
+h3,
+h4,
+h5 {
   font-size: inherit;
   font-weight: inherit;
 }
@@ -23,3 +36,27 @@ img {
   max-inline-size: 100%;
 }
 
+/* Kevin's modern CSS reset additions */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+p,
+li,
+figcaption {
+  text-wrap: pretty;
+  max-width: 65ch;
+}
+
+body > :is(header, footer),
+main,
+section,
+article {
+  container-type: inline-size;
+}
