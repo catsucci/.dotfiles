@@ -1,3 +1,4 @@
+echo "sourcing ~/.bashrc"
 #
 # ~/.bashrc
 #
@@ -9,13 +10,7 @@
 # fzf install:
 # git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install
 # zoxide install:
-# curl -sS https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh
-
-######################################################
-# Prompt
-######################################################
-DEFAULT=$PS1
-PS1="\w\$ "
+# curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh
 
 #######################################################
 # EXPORTS
@@ -45,9 +40,6 @@ export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_STATE_HOME="$HOME/.local/state"
 export XDG_CACHE_HOME="$HOME/.cache"
 
-# Seeing as other scripts will use it might as well export it
-export LINUXTOOLBOXDIR="$HOME/linuxtoolbox"
-
 # Allow ctrl-S for history navigation (with ctrl-R)
 [[ $- == *i* ]] && stty -ixon
 
@@ -57,6 +49,69 @@ if [[ $iatest -gt 0 ]]; then bind "set completion-ignore-case on"; fi
 
 # Show auto-completion list automatically, without double tab
 if [[ $iatest -gt 0 ]]; then bind "set show-all-if-ambiguous On"; fi
+
+# make less more friendly for non-text input files, see lesspipe(1)
+[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
+
+######################################################
+# Prompt
+######################################################
+DEFAULT=$PS1
+# PS1="\w\$ "
+
+# set variable identifying the chroot you work in (used in the prompt below)
+if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
+    debian_chroot=$(cat /etc/debian_chroot)
+fi
+
+# set a fancy prompt (non-color, unless we know we "want" color)
+case "$TERM" in
+    xterm-color|*-256color) color_prompt=yes;;
+esac
+
+# uncomment for a colored prompt, if the terminal has the capability; turned
+# off by default to not distract the user: the focus in a terminal window
+# should be on the output of commands, not on the prompt
+#force_color_prompt=yes
+
+if [ -n "$force_color_prompt" ]; then
+    if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
+	# We have color support; assume it's compliant with Ecma-48
+	# (ISO/IEC-6429). (Lack of such support is extremely rare, and such
+	# a case would tend to support setf rather than setaf.)
+	color_prompt=yes
+    else
+	color_prompt=
+    fi
+fi
+
+if [ "$color_prompt" = yes ]; then
+    # PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+    PS1='\[\033[01;30m\]\w\[\033[00m\]\$ '
+else
+    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+fi
+unset color_prompt force_color_prompt
+
+# If this is an xterm set the title to user@host:dir
+case "$TERM" in
+xterm*|rxvt*)
+    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
+    ;;
+*)
+    ;;
+esac
+
+# enable programmable completion features (you don't need to enable
+# this, if it's already enabled in /etc/bash.bashrc and /etc/profile
+# sources /etc/bash.bashrc).
+if ! shopt -oq posix; then
+  if [ -f /usr/share/bash-completion/bash_completion ]; then
+    . /usr/share/bash-completion/bash_completion
+  elif [ -f /etc/bash_completion ]; then
+    . /etc/bash_completion
+  fi
+fi
 
 # Set the default editor
 export EDITOR=nvim
@@ -78,8 +133,8 @@ export LESS_TERMCAP_ue=$'\E[0m'
 export LESS_TERMCAP_us=$'\E[01;32m'
 
 # SDKMAN
-export SDKMAN_DIR="$HOME/.sdkman"
-[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+# export SDKMAN_DIR="$HOME/.sdkman"
+# [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
 #######################################################
 # MACHINE SPECIFIC ALIAS'S
@@ -89,7 +144,7 @@ export SDKMAN_DIR="$HOME/.sdkman"
 # alias SERVERNAME='ssh YOURWEBSITE.com -l USERNAME -p PORTNUMBERHERE'
 
 # Alias's to change the directory
-alias web='cd /var/www/html'
+# alias web='cd /var/www/html'
 
 # Alias's to mount ISO files
 # mount -o loop /home/NAMEOFISO.iso /home/ISOMOUNTDIR/
@@ -461,7 +516,7 @@ function hb {
 # Set the ultimate amazing command prompt
 #######################################################
 
-alias hug="hugo server -F --bind=10.0.0.97 --baseURL=http://10.0.0.97"
+# alias hug="hugo server -F --bind=10.0.0.97 --baseURL=http://10.0.0.97"
 
 # Check if the shell is interactive
 if [[ $- == *i* ]]; then
@@ -472,4 +527,13 @@ fi
 export PATH=$PATH:"$HOME/.local/bin:$HOME/.cargo/bin:/var/lib/flatpak/exports/bin:/.local/share/flatpak/exports/bin"
 
 # eval "$(starship init bash)"
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
 eval "$(zoxide init bash)"
+
+# fnm
+FNM_PATH="/home/lunarhaze/.local/share/fnm"
+if [ -d "$FNM_PATH" ]; then
+  export PATH="$FNM_PATH:$PATH"
+  eval "`fnm env`"
+fi
