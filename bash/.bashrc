@@ -8,8 +8,20 @@
 
 # fzf install:
 # git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install
+#
 # zoxide install:
 # curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh
+#
+# node:
+# installs fnm (Fast Node Manager)
+# curl -fsSL https://fnm.vercel.app/install | bash
+# activate fnm
+# source ~/.bashrc
+# download and install Node.js
+# fnm use --install-if-missing 20
+#
+# cargo:
+# curl https://sh.rustup.rs -sSf | sh
 
 #######################################################
 # EXPORTS
@@ -175,6 +187,7 @@ alias ps='ps auxf'
 alias ping='ping -c 10'
 alias less='less -R'
 alias cls='clear'
+alias bat='batcat' # If you are using Ubuntu
 
 # Change directory aliases
 alias home='cd ~'
@@ -263,7 +276,7 @@ alias gdate='git log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblu
 alias gdatelong='git log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short'
 
 # tmux-sessisonizer script (needs fzf) credits: ThePrimeagen
-alias tmux-sessionizer='~/bin/scripts/tmux-sessionizer.sh'
+alias tmux-sessionizer='~/.local/scripts/tmux-sessionizer.sh'
 
 # SHA1
 alias sha1='openssl sha1'
@@ -536,3 +549,6 @@ if [ -d "$FNM_PATH" ]; then
   export PATH="$FNM_PATH:$PATH"
   eval "`fnm env`"
 fi
+
+# cargo for rust
+. "$HOME/.cargo/env"
