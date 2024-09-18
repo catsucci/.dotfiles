@@ -57,7 +57,7 @@ nmcli d wifi connect $SSID password $PASSWORD
 > note: In case some basic folder are missing (such as Desktop, Documents, ...) do the following:
 ```bash
 sudo pacman -S xdg-user-dirs
-xdg-users-dirs-update
+xdg-user-dirs-update
 ```
 
 ### Customizing pacman
